@@ -14,17 +14,14 @@ def print_array(array):
     print()
 
 
-# 生成一个数组
-def generate_array():
+# 生成一个指定大小的数组 ，如果提供参数则生成一个指定长度的数组
+def generate_array(*args):
     array = []
-    for x in range(30):
-        array.append(int(random.random() * 30))
-    return array
-
-
-# 生成一个指定大小的数组
-def generate_array(amount):
-    array = []
-    for x in range(amount):
-        array.append(int(random.random() * amount))
-    return array
+    if len(args) < 1:
+        for x in range(30):
+            array.append(int(random.random() * 30))
+        return array
+    else:
+        for x in range(args[0]):
+            array.append(int(random.random() * args[0]))
+        return array
