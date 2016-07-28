@@ -10,7 +10,7 @@ def exchange(array,index1,index2):
 # 打印数组的元素
 def print_array(array):
     for var in range(30):
-        print(array[var], end=",")
+        print(array[var],)
     print()
 
 
