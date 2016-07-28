@@ -3,7 +3,7 @@ from utility import array_utility as au
 
 
 # 归并过程
-def merge2(left_array, right_array):
+def merge(left_array, right_array):
     right, left = 0, 0
     result = []
     while left < len(left_array) and right < len(right_array):
@@ -20,17 +20,17 @@ def merge2(left_array, right_array):
 
 # 归并排序 ，开局就是递归，递归，递归... 一直到数组中就两个元素拿去归并。[4,3] [1,6] 会归并成 [1,3,4,6]以此为返回结果，弹栈继续递归，
 # 以[1,3,4,6]为一个单位与另一个单位继续归并，一次类推，返回结果.
-def merge_sort2(array):
+def merge_sort(array):
     if len(array) <= 1:
         return array
     middle = int(len(array) / 2)
-    left_array = merge_sort2(array[:middle])
-    right_array = merge_sort2(array[middle:])
-    return merge2(left_array, right_array)
+    left_array = merge_sort(array[:middle])
+    right_array = merge_sort(array[middle:])
+    return merge(left_array, right_array)
 
 
 if __name__ == "__main__":
     temp_array = au.generate_array()
     print(temp_array)
-    temp_array = merge_sort2(temp_array)
+    temp_array = merge_sort(temp_array)
     print(temp_array)
