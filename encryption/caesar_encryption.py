@@ -24,12 +24,12 @@ def caesar_decipher(cipher_text, security_key):
     clear_array = []
     for char in cipher_array:
         if 97 <= char <= 122:
-            clear_array.append(chr(char_array[(abs(char - security_key - 97)) % 25]))
+            clear_array.append(chr(char_array[25 % (abs(char - security_key - 97))]))
         else:
             clear_array.append(chr(char))
     return ''.join(clear_array)
 
 
 if "__main__" == __name__:
-    print(caesar_cipher('abc', 2))
+    print(caesar_cipher('abc', 27))
     print(caesar_decipher(caesar_cipher('abc', 27), 27))
