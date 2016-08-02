@@ -21,7 +21,7 @@ def decode(security_message):
 
 
 if __name__ == "__main__":
-    temp_key = "iloveu"
+    temp_key = "love"
     temp_security_message = encode(temp_key)
     print(temp_security_message)
     print(decode(temp_security_message))

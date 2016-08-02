@@ -2,7 +2,7 @@
 from utility import array_utility as au
 
 
-# 归并过程
+# 归并过程 ,这种过程得益于有切片功能，和数组操作极其方便的 python语言设计。所以这种实现方式，基本只会在python中出现
 def merge(left_array, right_array):
     right, left = 0, 0
     result = []
