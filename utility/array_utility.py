@@ -3,7 +3,7 @@ import random
 
 
 # 交换数组的两个元素
-def exchange(array, index1,index2):
+def exchange(array, index1, index2):
     array[index1], array[index2] = array[index2], array[index1]
 
 

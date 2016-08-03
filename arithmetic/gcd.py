@@ -11,4 +11,4 @@ def gcd(key1, key2):
 
 
 if __name__ == "__main__":
-    print(gcd(11, 7))
+    print(gcd(21, 7))
