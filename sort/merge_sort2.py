@@ -2,7 +2,7 @@
 from utility import array_utility as au
 
 
-# 通过下标的形式进行归并排序,开始用[None]初始化数组的时候，调用Append方法，插入了None的后面。。。蛋疼
+# 通过下标的形式进行归并排序
 def merge(array, low, middle, high):
     temp = [None] * (high - low + 1)
     left = low
