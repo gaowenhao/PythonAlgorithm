@@ -2,6 +2,7 @@
 from utility import array_utility as au
 
 
+# 希尔排序，插入排序的强化版选择一个增量，对比增量两端的数字大小小的左移，大的右移,最后执行插入排序，从而减少插入排序移动元素的个数
 def shell_sort(array):
     gap = int(len(array) / 2)  # 增量(说白了就是对比数的间隔)
     while 1 <= gap:
