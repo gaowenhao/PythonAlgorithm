@@ -1,2 +1,2 @@
 # PythonAlgorithm
-There are some of algorithm in python .
+There are some algorithms with python .

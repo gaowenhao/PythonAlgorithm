@@ -3,6 +3,7 @@ from utility import array_utility as au
 import math
 
 
+# 基数排序，其方法就是选择一个基数，对个位，十位，百位...进行排序，以基数为准
 def radix_sort(array, radix=10):
     k = int(math.ceil(math.log(max(array), radix)))
 
