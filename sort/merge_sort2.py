@@ -2,7 +2,8 @@
 from utility import array_utility as au
 
 
-# 通过下标的形式进行归并排序
+# 通过下标的形式进行归并排序，
+# 这样的代码很繁琐，因为python中没有++操作符 而且也没有标准for(var;condition;change(var)) 导致这种方法出现大量的代码
 def merge(array, low, middle, high):
     temp = [None] * (high - low + 1)
     left = low
