@@ -6,15 +6,17 @@ from utility import array_utility as au
 def merge(left_array, right_array):
     right, left = 0, 0
     result = []
-    while left < len(left_array) and right < len(right_array):
+    left_array_length = len(left_array)
+    right_array_length = len(right_array)
+    while left < left_array_length and right < right_array_length:
         if left_array[left] < right_array[right]:
             result.append(left_array[left])  # [4,3] [1,6] 如果 4 < 1 则把4添加进临时数组
             left += 1
         else:
             result.append(right_array[right])  # [4,3] [1,6] 不然 就把 1添加进临时数组
             right += 1
-    result += right_array[right:]   # 把剩余条目扔进result中
-    result += left_array[left:]   # 把剩余条目扔进result中
+    result += right_array[right:]  # 把剩余条目扔进result中
+    result += left_array[left:]  # 把剩余条目扔进result中
     return result
 
 
